@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "portfolio-73d7e"
-  }
+    "default": "portfolio-73d7e",
+    "y": "portfolio-73d7e"
+  },
+  "targets": {}
 }

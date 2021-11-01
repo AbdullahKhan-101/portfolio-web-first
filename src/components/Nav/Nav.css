@@ -1,13 +1,39 @@
 /* //hover button back color #36cdfe */
 .nav {
   background-color: whitesmoke;
-  position: static;
+  position: fixed;
+  /* left: 0; */
   top: 0;
+  /* opacity: 0.5; */
+  z-index: 999;
+  width: 100vw;
+
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 10px;
   box-shadow: 0px 2px 5px 0.5px rgba(0, 0, 0, 0.226);
+}
+@media screen and (max-width: 1400px) {
+  .nav {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 800px) {
+  .nav {
+    justify-content: center;
+  }
+  .logo {
+    width: 120px !important;
+  }
+}
+@media screen and (max-width: 760px) {
+  .nav {
+    justify-content: space-evenly;
+  }
+  .logo {
+    width: 100px !important;
+  }
 }
 ul {
   align-items: center;
@@ -15,6 +41,7 @@ ul {
   list-style: none;
 }
 ul > li {
+  cursor: pointer;
   margin: 0px 4px;
 }
 .menu a {
@@ -27,7 +54,16 @@ ul > li {
   -webkit-transition: background-image 0.2s ease-in-out;
   transition: background-image 0.25s ease-in-out;
   transition: all 0.25s ease;
+  opacity: 0;
+  animation: 0.7s fadein 0.5s forwards;
 }
+
+@keyframes fadein {
+  100% {
+    opacity: 1;
+  }
+}
+
 .menu a:hover {
   background-image: linear-gradient(
     to right,
@@ -43,6 +79,8 @@ a {
   width: 160px;
 }
 .logo > img {
+  opacity: 0;
+  animation: 0.7s fadein 0.5s forwards;
   cursor: pointer;
   height: auto;
   width: 100%;

@@ -1,0 +1,11 @@
+.portfolio {
+  width: 90%;
+  margin: 10px auto;
+}
+.Portfolio_cards {
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 5px auto;
+}

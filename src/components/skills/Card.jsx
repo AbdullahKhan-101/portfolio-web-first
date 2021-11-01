@@ -1,20 +1,14 @@
 import React from "react";
 import "./Card.css";
-import html from "../../images/html (1).png";
+// import JS from "../../images/javascript.png";
 
-const Card = () => {
+const Card = ({ icon, title }) => {
   return (
     <div className="card">
-      <div className="img">
-        <img src={html} alt="" />
+      <div className="image">
+        <img src={icon} alt="" />
       </div>
-      <div className="text">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
-          dolor sit amet consectetur adipisicing elit.
-        </p>
-      </div>
-      <button></button>
+      <h4>{title}</h4>
     </div>
   );
 };

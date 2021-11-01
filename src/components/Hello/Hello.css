@@ -1,9 +1,37 @@
 .hello {
   display: flex;
+  flex-wrap: wrap;
   width: 80%;
   justify-content: space-evenly;
-  margin: 20px auto;
+  margin: 100px auto 20px auto;
   height: 80vh;
+}
+@media screen and (max-width: 1400px) {
+  .hello {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 1172px) {
+  .hello {
+    width: 95%;
+    margin: 10px auto;
+  }
+  .profile {
+    margin-top: 100px !important;
+    height: 250px !important;
+    width: 22em !important;
+  }
+}
+@media screen and (max-width: 835px) {
+  .hello {
+    width: 100%;
+    margin: 0px auto;
+  }
+  .profile {
+    margin-top: 0px !important;
+    /* height: 250px !important; */
+    /* width: 22em !important; */
+  }
 }
 .text {
   display: flex;
@@ -13,13 +41,12 @@
 }
 .text > h1 {
   color: rgb(41, 69, 70);
-  font-size: 45px;
-  line-height: 70px;
-  margin-right: 60px;
+  font-size: 3em;
 }
 .text > p {
+  width: 23em;
   color: gray;
-  font-size: 18px;
+  font-size: 1.2em;
   margin-bottom: 12px;
   text-align: justify;
 }
@@ -44,13 +71,14 @@
   margin-left: 8px;
 }
 .profile {
-  /* height: 400px; */
-  justify-content: center;
-  flex-direction: column;
-  display: flex;
+  margin-top: 80px;
+  height: 400px;
+  width: 42em;
+  overflow: hidden;
 }
+
 .profile > img {
+  margin: 10px 0px;
   width: 100%;
-  border-radius: 6px;
-  box-shadow: 0px 4px 5px 3px rgba(0, 0, 0, 0.247);
+  cursor: pointer;
 }
